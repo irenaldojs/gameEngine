@@ -1,0 +1,57 @@
+:root {
+  --bar: #1f2a37;
+  --bar-text: #e8edf3;
+  --stage: #0f1720;
+  --panel: #f1f3f5;
+  --ink: #1b232c;
+  --muted: #5d6b79;
+  --accent: #2f6feb;
+  --line: #d5dbe1;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  display: flex; flex-direction: column;
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink); background: var(--panel);
+}
+.bar {
+  display: flex; align-items: center; gap: 16px;
+  padding: 8px 14px; background: var(--bar); color: var(--bar-text);
+}
+.brand { font-size: 15px; letter-spacing: .02em; }
+.project { color: #9fb0c3; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.actions { display: flex; gap: 8px; }
+button {
+  font: inherit; color: inherit; cursor: pointer;
+  padding: 5px 12px; border-radius: 4px;
+  background: transparent; border: 1px solid #4a5a6c;
+}
+button:hover { background: #2b394a; }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.workspace { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 240px; }
+.stage {
+  display: grid; place-items: center; padding: 16px;
+  background: var(--stage); min-width: 0; min-height: 0;
+}
+canvas {
+  background: #17222e; max-width: 100%; max-height: 100%;
+  border: 1px solid #2c3b4c;
+}
+.panel { padding: 14px 16px; border-left: 1px solid var(--line); overflow: auto; }
+.panel h2 { margin: 0 0 10px; font-size: 15px; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; }
+dt { color: var(--muted); }
+dd { margin: 0; font-variant-numeric: tabular-nums; }
+.hint { color: var(--muted); margin-top: 16px; }
+@media (max-width: 720px) {
+  .workspace { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+  .panel { border-left: 0; border-top: 1px solid var(--line); }
+}
+.error {
+  margin: 12px 0 0; padding: 10px; border-radius: 4px;
+  background: #fdecea; color: #7a1c14; border: 1px solid #f1b5ad;
+  font: 12px/1.4 ui-monospace, "Cascadia Mono", Menlo, monospace;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}

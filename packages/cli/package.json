@@ -1,0 +1,10 @@
+{
+  "name": "meumotor",
+  "version": "0.0.1",
+  "description": "Motor de jogos 2D para a web, com editor no navegador.",
+  "type": "module",
+  "bin": { "meumotor": "dist/cli.js" },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "dependencies": { "esbuild": "^0.25.0" }
+}

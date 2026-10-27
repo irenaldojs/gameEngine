@@ -1,0 +1,6 @@
+{
+  "name": "teste",
+  "width": 640,
+  "height": 360,
+  "entry": "src/main.ts"
+}

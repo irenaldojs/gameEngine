@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeuMotor</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script type="importmap">{"imports":{"meumotor":"/__engine/index.js"}}</script>
+</head>
+<body>
+  <header class="bar">
+    <strong class="brand">MeuMotor</strong>
+    <span id="project" class="project"></span>
+    <div class="actions">
+      <button id="btn-play" type="button">Pausar</button>
+      <button id="btn-restart" type="button">Reiniciar</button>
+    </div>
+  </header>
+  <main class="workspace">
+    <section class="stage">
+      <canvas id="game" aria-label="Pré-visualização do jogo"></canvas>
+    </section>
+    <aside class="panel">
+      <h2>Estado</h2>
+      <dl>
+        <dt>FPS</dt><dd id="stat-fps">–</dd>
+        <dt>Cena</dt><dd id="stat-scene">–</dd>
+        <dt>Resolução</dt><dd id="stat-size">–</dd>
+      </dl>
+      <pre id="error" class="error" role="alert" hidden></pre>
+      <p class="hint">Edite os arquivos do projeto: a pré-visualização recarrega sozinha.</p>
+    </aside>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
